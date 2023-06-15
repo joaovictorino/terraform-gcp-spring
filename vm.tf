@@ -4,10 +4,10 @@ resource "google_compute_address" "ip-aula" {
 
 resource "google_compute_address" "internal-ip" {
   name         = "internal-ip"
-  project      = "teste-sample-388301" 
+  project      = "teste-sample-388301"
   subnetwork   = google_compute_subnetwork.subnet-aula.name
   address_type = "INTERNAL"
-  address     = "10.80.4.11"
+  address      = "10.80.4.11"
   region       = "us-central1"
 }
 
@@ -26,10 +26,10 @@ resource "google_compute_instance" "vm-aula" {
   }
 
   network_interface {
-    network = google_compute_network.vpc-aula.name
+    network    = google_compute_network.vpc-aula.name
     subnetwork = google_compute_subnetwork.subnet-aula.name
     network_ip = google_compute_address.internal-ip.address
-    
+
     access_config {
       nat_ip = google_compute_address.ip-aula.address
     }

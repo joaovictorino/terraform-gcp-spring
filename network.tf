@@ -1,5 +1,5 @@
 resource "google_compute_network" "vpc-aula" {
-  name = "vpc-aula"
+  name                    = "vpc-aula"
   auto_create_subnetworks = false
 }
 
