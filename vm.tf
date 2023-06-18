@@ -21,7 +21,7 @@ resource "google_compute_instance" "vm-aula" {
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-os-cloud/ubuntu-1804-lts"
+      image = "ubuntu-os-pro-cloud/ubuntu-pro-1804-lts"
     }
   }
 
