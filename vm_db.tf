@@ -14,6 +14,7 @@ resource "google_compute_address" "internal-ip-db" {
 resource "google_compute_instance" "vm-aula-db" {
   name         = "vm-aula-db"
   machine_type = "e2-small"
+  zone         = "us-central1-a"
 
   metadata = {
     ssh-keys = "ubuntu:${file("id_rsa.pub")}"
